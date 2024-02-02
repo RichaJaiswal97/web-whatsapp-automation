@@ -1,4 +1,4 @@
-package DataProvider;
+package dataProvider;
 
 import org.apache.poi.hssf.usermodel.HSSFDataFormatter;
 import org.apache.poi.ss.usermodel.*;

@@ -1,9 +1,9 @@
-package BaseSetup;
+package baseSetup;
 
 
-import PageObject.MainMenu;
-import Utility.BrowserLaunch;
-import Utility.ConfigFileReader;
+import pageObject.MainMenu;
+import utility.BrowserLaunch;
+import utility.ConfigFileReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -13,12 +13,12 @@ import org.testng.log4testng.Logger;
 
 import java.time.Duration;
 
-public class BaseClass {
+public class BaseBrowserSetup {
     ConfigFileReader configReader = new ConfigFileReader();
     protected static WebDriver driver;
     WebDriverWait wait;
     MainMenu mainMenu;
-    static final Logger logger = Logger.getLogger(BaseClass.class);
+    static final Logger logger = Logger.getLogger(BaseBrowserSetup.class);
 
     @BeforeTest
     public void baseSetup() throws InterruptedException {

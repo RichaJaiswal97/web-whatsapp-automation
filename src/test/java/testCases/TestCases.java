@@ -1,9 +1,9 @@
-package Test_Cases;
+package testCases;
 
-import BaseSetup.BaseClass;
-import DataProvider.CsvDataProvider;
-import PageObject.MainMenu;
-import Utility.ConfigFileReader;
+import baseSetup.BaseBrowserSetup;
+import dataProvider.CsvDataProvider;
+import pageObject.MainMenu;
+import utility.ConfigFileReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,7 +15,7 @@ import java.time.Duration;
 
 import static org.testng.Assert.assertEquals;
 
-public class TestCases extends BaseClass {
+public class TestCases extends BaseBrowserSetup {
     ConfigFileReader configReader = new ConfigFileReader();
     MainMenu mainMenu;
     Actions actions;
