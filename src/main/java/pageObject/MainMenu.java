@@ -20,7 +20,7 @@ public class MainMenu {
     @FindBy(xpath = "//*[@title = 'Search input textbox']")
     public WebElement SearchBox;
 
-   @FindAll( {@FindBy(xpath = "//*[@role= 'listitem']//div[@role='gridcell']/div[1]")})
+   @FindAll( {@FindBy(xpath = "//div[11]/div/div/div/div[2]/div[1]/div[1]/div/span")}) //*[@role= 'listitem']//div[@role='gridcell']/div[1]")})
    public List<WebElement> SearchResult;
 
    @FindBy(xpath = "//*[@title='Type a message']")

@@ -27,14 +27,14 @@ public class BaseBrowserSetup {
         logger.info("Browser is Launched");
         driver.get(configReader.getProperty("Url"));
         driver.manage().window().maximize();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(80));
         mainMenu = new MainMenu(driver);
         wait.until(ExpectedConditions.visibilityOf((mainMenu.SearchBox)));
         logger.info("Web-WhatsApp is logged in");
     }
 
-    @AfterTest
-    public void closeBrowser() {
-        driver.close();
-    }
+//    @AfterTest
+//    public void closeBrowser() {
+//        driver.close();
+ //  }
 }

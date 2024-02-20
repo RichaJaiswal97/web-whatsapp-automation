@@ -37,4 +37,32 @@ public class CsvDataProvider {
         return data;
 
     }
+
+
+
+
+    @DataProvider (name = "MobileNo")
+
+    public static Object[] getDatafromExcel() throws IOException {
+        HSSFDataFormatter hdf = new HSSFDataFormatter();
+        FileInputStream fileName = new FileInputStream("./src/main/resources/MobileNo.xlsx");
+        Workbook excel = new XSSFWorkbook(fileName);
+        Sheet sheetNo = excel.getSheetAt(0);
+        int rowCount = sheetNo.getPhysicalNumberOfRows();
+        int columnCount = sheetNo.getRow(0).getLastCellNum();
+        Object[][] data = new Object[rowCount - 1][columnCount];
+        for (int i = 0; i < rowCount; i++) {
+            Row row = sheetNo.getRow(i + 1);
+            if (row != null) {
+                for (int k = 0; k < columnCount; k++) {
+                    Cell cellValue = row.getCell(k);
+
+                    data[i][k] = hdf.formatCellValue(cellValue);
+                }
+            }
+        }
+
+        return data;
+
+    }
 }
